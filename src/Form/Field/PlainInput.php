@@ -6,17 +6,19 @@ trait PlainInput
 {
     /**
      * @var string
+     * @deprecated
      */
     protected $prepend;
 
     /**
      * @var string
+     * @deprecated
      */
     protected $append;
 
     /**
      * @param mixed $string
-     *
+     * @deprecated
      * @return $this
      */
     public function prepend($string)
@@ -30,7 +32,7 @@ trait PlainInput
 
     /**
      * @param mixed $string
-     *
+     * @deprecated
      * @return $this
      */
     public function append($string)
@@ -42,20 +44,11 @@ trait PlainInput
         return $this;
     }
 
-    /**
-     * @return void
-     */
-    protected function initPlainInput()
-    {
-        if (empty($this->view)) {
-            $this->view = 'admin::form.input';
-        }
-    }
 
     /**
      * @param string $attribute
      * @param string $value
-     *
+     * @deprecated
      * @return $this
      */
     protected function defaultAttribute($attribute, $value)
